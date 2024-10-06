@@ -10,9 +10,11 @@ import java.util.ArrayList;
 
 public class pandas
 {
+  // Reads CSV to a dataframe
   public ArrayList<ArrayList<String>> read_csv(String sourceData)
   {
     ArrayList<ArrayList<String>> dataframe = new ArrayList<>();
+    // RegEx to separate on a comma and to keep items within double quotes together
     String dataSep = ",(?=([^\"]*\"[^\"]*\")*[^\"]*$)";
 
     try
@@ -41,6 +43,7 @@ public class pandas
     return dataframe;
   }
   
+  // Checks columns for a certain value and then returns the count of times it appears
   public int columnCheck(ArrayList<ArrayList<String>> dataframe, int column, String value)
   {
     int answer = 0;
@@ -48,6 +51,7 @@ public class pandas
 
     while(i < dataframe.size())
     {
+      // Converts to UpperCase before doing any comparisons
       if(dataframe.get(i).get(column).toUpperCase().contains(value.toUpperCase()))
       {
         answer++;
@@ -58,6 +62,9 @@ public class pandas
     return answer;
   }
 
+  // Writes to_csv. Does not work like actual pandas would
+  // Only intakes filelocation and then outputs prompted text
+  // May overload this method later to allow for full dataframe output for extra credit items
   public void to_csv(String fileLocation, String textInput)
   {
 
@@ -65,6 +72,7 @@ public class pandas
     {
       File f = new File(fileLocation);
       FileWriter fw;
+      // Checks if the file exists already. Does not overwrite / create a new one if exists
       if(!f.exists())
       {
         fw = new FileWriter(fileLocation);
@@ -83,6 +91,8 @@ public class pandas
     }
   }
 
+  // Created a filter function because I misunderstood the assignment
+  // Kept the function in in case I needed it in the future
   public ArrayList<ArrayList<String>> filter(ArrayList<ArrayList<String>> dataframe, int column, String value)
   {
     ArrayList<ArrayList<String>> newDataFrame = new ArrayList<>();
@@ -94,6 +104,10 @@ public class pandas
     return newDataFrame;
   }
 
+  // Was originally going to use unique to dynamically determine the unique milk types
+  // Then go through the list to count each type of milk
+  // This ended up not working out because there were combinations of milk types used
+  // Kept this functionality in in case of future use cases
   public ArrayList<String> unique(ArrayList<ArrayList<String>> dataframe, int column)
   {
     ArrayList<String> uniqueList = new ArrayList<>();

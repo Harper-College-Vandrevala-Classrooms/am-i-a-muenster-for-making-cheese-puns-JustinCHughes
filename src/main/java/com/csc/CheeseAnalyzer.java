@@ -6,6 +6,7 @@ public class CheeseAnalyzer
 {
   public static void main(String[] args)
   {
+    // Created pseudo pandas java class for homework assignment
     pandas pd = new pandas();
     String cheese = "cheese_data.csv";
 
@@ -25,6 +26,8 @@ public class CheeseAnalyzer
     int currMax = 0;
     int test;
 
+    // Iterates over milkType items to check for max
+    // Then sets variables accordingly to retain max info
     for(String item : milkType)
     {
       test = pd.columnCheck(df, 8, item);
@@ -41,6 +44,8 @@ public class CheeseAnalyzer
     pd.to_csv("output.txt", input);
   }
 
+  // Could not think of a way to get my pandas class to properly handle multi parameter counts
+  // Opted to just hard code the check for this
   public static int orgAndMoist(ArrayList<ArrayList<String>> df)
   {
     int i = 1;
