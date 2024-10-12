@@ -98,7 +98,11 @@ public class pandas
     ArrayList<ArrayList<String>> newDataFrame = new ArrayList<>();
     for(ArrayList<String> row : dataframe)
     {
-      newDataFrame.add(row);
+
+      if(row.get(column).toUpperCase().contains(value.toUpperCase()))
+      {
+        newDataFrame.add(row);
+      }
     }
 
     return newDataFrame;
