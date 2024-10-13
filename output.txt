@@ -6,3 +6,19 @@ The amount of cheeses that use milk from a(n) goat is: 230
 The amount of cheeses that use milk from a(n) ewe is: 69
 The amount of cheeses that use milk from a(n) buffalo is: 2
 Milk from a cow is the most used for cheeses in Canada with a total of: 763
+The amount of cheeses that use pasteurized milk are: 800
+The amount of cheeses that use raw milk are: 115
+The amount of cheeses that are both organic and over 41% moisture are: 53
+The amount of cheeses that use milk from a(n) cow is: 763
+The amount of cheeses that use milk from a(n) goat is: 230
+The amount of cheeses that use milk from a(n) ewe is: 69
+The amount of cheeses that use milk from a(n) buffalo is: 2
+Milk from a cow is the most used for cheeses in Canada with a total of: 763
+The amount of cheeses that use pasteurized milk are: 800
+The amount of cheeses that use raw milk are: 115
+The amount of cheeses that are both organic and over 41% moisture are: 53
+The amount of cheeses that use milk from a(n) cow is: 763
+The amount of cheeses that use milk from a(n) goat is: 230
+The amount of cheeses that use milk from a(n) ewe is: 69
+The amount of cheeses that use milk from a(n) buffalo is: 2
+Milk from a cow is the most used for cheeses in Canada with a total of: 763

@@ -8,19 +8,18 @@ public class CheeseAnalyzer
   {
     // Created pseudo pandas java class for homework assignment
     pandas pd = new pandas();
-    Read_CSV rcsv = new Read_CSV();
     String cheese = "cheese_data.csv";
 
-    ArrayList<ArrayList<String>> df = rcsv.read_csv(cheese);
+    ArrayList<ArrayList<String>> df = Read_CSV.read_csv(cheese);
 
     String input = "The amount of cheeses that use pasteurized milk are: " + pd.columnCheck(df, 9, "Pasteurized") + "\n";
-    pd.to_csv("output.txt", input);
+    Write_CSV.to_csv("output.txt", input);
     
     input = "The amount of cheeses that use raw milk are: " + pd.columnCheck(df, 9, "Raw Milk") + "\n";
-    pd.to_csv("output.txt", input);
+    Write_CSV.to_csv("output.txt", input);
 
     input = "The amount of cheeses that are both organic and over 41% moisture are: " + orgAndMoist(df) + "\n";
-    pd.to_csv("output.txt", input);
+    Write_CSV.to_csv("output.txt", input);
 
     String[] milkType = {"cow","goat","ewe", "buffalo"};
     String maxMilk = "";
@@ -33,7 +32,7 @@ public class CheeseAnalyzer
     {
       test = pd.columnCheck(df, 8, item);
       input = "The amount of cheeses that use milk from a(n) " + item + " is: " + test + "\n";
-      pd.to_csv("output.txt", input);
+      Write_CSV.to_csv("output.txt", input);
       if(test > currMax)
       {
         currMax = test;
@@ -42,7 +41,7 @@ public class CheeseAnalyzer
     }
 
     input = "Milk from a " + maxMilk + " is the most used for cheeses in Canada with a total of: " + currMax + "\n";
-    pd.to_csv("output.txt", input);
+    Write_CSV.to_csv("output.txt", input);
   }
 
   // Could not think of a way to get my pandas class to properly handle multi parameter counts

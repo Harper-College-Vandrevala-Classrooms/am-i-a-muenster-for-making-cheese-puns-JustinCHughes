@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Read_CSV {
   // Reads CSV to a dataframe
-  public ArrayList<ArrayList<String>> read_csv(String sourceData)
+  public static ArrayList<ArrayList<String>> read_csv(String sourceData)
   {
     ArrayList<ArrayList<String>> dataframe = new ArrayList<>();
     // RegEx to separate on a comma and to keep items within double quotes together
