@@ -21,4 +21,25 @@ public class Contains {
 
     return answer;
   }
+
+  // Opted to just hard code the check for this
+  public static int orgAndMoist(ArrayList<ArrayList<String>> df)
+  {
+    int i = 1;
+    int organicXMoist = 0;
+    
+    while(i < df.size())
+    {
+      if(!((df.get(i).get(6)).trim().isEmpty()) && !((df.get(i).get(3)).trim().isEmpty()))
+      {
+        if((Integer.valueOf(df.get(i).get(6)) == 1) && (Double.valueOf(df.get(i).get(3)) > 41.0))
+        {
+          organicXMoist++;
+        }
+      }
+      i++;
+    }
+
+    return organicXMoist;
+  }
 }
