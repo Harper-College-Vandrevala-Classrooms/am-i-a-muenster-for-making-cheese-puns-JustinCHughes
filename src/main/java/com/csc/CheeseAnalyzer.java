@@ -8,9 +8,10 @@ public class CheeseAnalyzer
   {
     // Created pseudo pandas java class for homework assignment
     pandas pd = new pandas();
+    Read_CSV rcsv = new Read_CSV();
     String cheese = "cheese_data.csv";
 
-    ArrayList<ArrayList<String>> df = pd.read_csv(cheese);
+    ArrayList<ArrayList<String>> df = rcsv.read_csv(cheese);
 
     String input = "The amount of cheeses that use pasteurized milk are: " + pd.columnCheck(df, 9, "Pasteurized") + "\n";
     pd.to_csv("output.txt", input);
