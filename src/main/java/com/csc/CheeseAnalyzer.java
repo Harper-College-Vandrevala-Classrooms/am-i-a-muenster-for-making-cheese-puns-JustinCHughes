@@ -11,13 +11,13 @@ public class CheeseAnalyzer
     ArrayList<ArrayList<String>> df = Read_CSV.read_csv(cheese);
 
     String input = "The amount of cheeses that use pasteurized milk are: " + Contains.check(df, 9, "Pasteurized") + "\n";
-    Write_CSV.to_csv("output.txt", input);
+    Write_CSV.statement("output.txt", input);
     
     input = "The amount of cheeses that use raw milk are: " + Contains.check(df, 9, "Raw Milk") + "\n";
-    Write_CSV.to_csv("output.txt", input);
+    Write_CSV.statement("output.txt", input);
 
     input = "The amount of cheeses that are both organic and over 41% moisture are: " + orgAndMoist(df) + "\n";
-    Write_CSV.to_csv("output.txt", input);
+    Write_CSV.statement("output.txt", input);
 
     String[] milkType = {"cow","goat","ewe", "buffalo"};
     String maxMilk = "";
@@ -30,7 +30,7 @@ public class CheeseAnalyzer
     {
       test = Contains.check(df, 8, item);
       input = "The amount of cheeses that use milk from a(n) " + item + " is: " + test + "\n";
-      Write_CSV.to_csv("output.txt", input);
+      Write_CSV.statement("output.txt", input);
       if(test > currMax)
       {
         currMax = test;
@@ -39,7 +39,7 @@ public class CheeseAnalyzer
     }
 
     input = "Milk from a " + maxMilk + " is the most used for cheeses in Canada with a total of: " + currMax + "\n";
-    Write_CSV.to_csv("output.txt", input);
+    Write_CSV.statement("output.txt", input);
   }
 
   // Could not think of a way to get my pandas class to properly handle multi parameter counts

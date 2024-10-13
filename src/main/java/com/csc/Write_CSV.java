@@ -9,7 +9,7 @@ public class Write_CSV {
   // Writes to_csv. Does not work like actual pandas would
   // Only intakes filelocation and then outputs prompted text
   // May overload this method later to allow for full dataframe output for extra credit items
-  public static void to_csv(String fileLocation, String textInput)
+  public static void statement(String fileLocation, String textInput)
   {
 
     try
