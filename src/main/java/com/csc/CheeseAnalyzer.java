@@ -6,16 +6,14 @@ public class CheeseAnalyzer
 {
   public static void main(String[] args)
   {
-    // Created pseudo pandas java class for homework assignment
-    pandas pd = new pandas();
     String cheese = "cheese_data.csv";
 
     ArrayList<ArrayList<String>> df = Read_CSV.read_csv(cheese);
 
-    String input = "The amount of cheeses that use pasteurized milk are: " + pd.columnCheck(df, 9, "Pasteurized") + "\n";
+    String input = "The amount of cheeses that use pasteurized milk are: " + Contains.check(df, 9, "Pasteurized") + "\n";
     Write_CSV.to_csv("output.txt", input);
     
-    input = "The amount of cheeses that use raw milk are: " + pd.columnCheck(df, 9, "Raw Milk") + "\n";
+    input = "The amount of cheeses that use raw milk are: " + Contains.check(df, 9, "Raw Milk") + "\n";
     Write_CSV.to_csv("output.txt", input);
 
     input = "The amount of cheeses that are both organic and over 41% moisture are: " + orgAndMoist(df) + "\n";
@@ -30,7 +28,7 @@ public class CheeseAnalyzer
     // Then sets variables accordingly to retain max info
     for(String item : milkType)
     {
-      test = pd.columnCheck(df, 8, item);
+      test = Contains.check(df, 8, item);
       input = "The amount of cheeses that use milk from a(n) " + item + " is: " + test + "\n";
       Write_CSV.to_csv("output.txt", input);
       if(test > currMax)
