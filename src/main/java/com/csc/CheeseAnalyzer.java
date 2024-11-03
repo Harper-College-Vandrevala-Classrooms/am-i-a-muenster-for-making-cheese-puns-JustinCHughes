@@ -19,9 +19,6 @@ public class CheeseAnalyzer
     input = "The amount of cheeses that are both organic and over 41% moisture are: " + Contains.orgAndMoist(df) + "\n";
     Write_CSV.statement("output.txt", input);
 
-    input = "The amount of cheeses described as lactic are: " + Contains.check(df, 4, "lactic") + "\n";
-    Write_CSV.statement("output.txt", input);
-
     String[] milkType = {"cow","goat","ewe", "buffalo"};
     String maxMilk = "";
     int currMax = 0;
@@ -42,6 +39,9 @@ public class CheeseAnalyzer
     }
 
     input = "Milk from a " + maxMilk + " is the most used for cheeses in Canada with a total of: " + currMax + "\n";
+    Write_CSV.statement("output.txt", input);
+
+    input = "\nExtra Credit\nThe amount of cheeses described as lactic are: " + Contains.check(df, 4, "lactic") + "\n";
     Write_CSV.statement("output.txt", input);
 
     input = "The average percent moisture of the cheeses listed is " + Contains.colAvg(df, 3) + "%\n";
