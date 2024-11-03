@@ -44,6 +44,7 @@ public class CheeseAnalyzer
     input = "The average percent moisture of the cheeses listed is " + Contains.colAvg(df, 3) + "%\n";
     Write_CSV.statement("output.txt", input);
 
-    Write_CSV.dfToCSV("Test.csv", df, true);
+    Write_CSV.dfToCSV("cheese_without_headers.csv", df, false);
+    Write_CSV.dfToCSV("cheese_without_ids.csv", Manipulation.dropColumn(df, 0), true);
   }
 }
