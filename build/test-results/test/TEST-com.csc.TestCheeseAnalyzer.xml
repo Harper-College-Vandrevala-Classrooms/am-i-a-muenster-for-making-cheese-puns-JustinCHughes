@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.csc.TestCheeseAnalyzer" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-11-03T18:04:26" hostname="fedora" time="0.154">
+<testsuite name="com.csc.TestCheeseAnalyzer" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-11-03T19:43:58" hostname="fedora" time="0.118">
   <properties/>
-  <testcase name="testColumn0()" classname="com.csc.TestCheeseAnalyzer" time="0.135"/>
+  <testcase name="testColumn0()" classname="com.csc.TestCheeseAnalyzer" time="0.1"/>
   <testcase name="testColumn1()" classname="com.csc.TestCheeseAnalyzer" time="0.002"/>
-  <testcase name="testColumn2()" classname="com.csc.TestCheeseAnalyzer" time="0.003"/>
-  <testcase name="itWorks()" classname="com.csc.TestCheeseAnalyzer" time="0.006"/>
+  <testcase name="testColumn2()" classname="com.csc.TestCheeseAnalyzer" time="0.002"/>
+  <testcase name="itWorks()" classname="com.csc.TestCheeseAnalyzer" time="0.007"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -38,16 +38,18 @@ public class Write_CSV {
 
   public static void dfToCSV(String fileLocation, ArrayList<ArrayList<String>> df, boolean header)
   {
+    ArrayList<ArrayList<String>> writeDF = new ArrayList<>(df);
+    
     if(!header)
     {
-      df.remove(0);
+      writeDF.remove(0);
     }
     try
     {
       File f = new File(fileLocation);
       FileWriter fw = new FileWriter(fileLocation);
       BufferedWriter writer = new BufferedWriter(fw);
-      for (ArrayList<String> row: df)
+      for (ArrayList<String> row: writeDF)
       {
         for (int i = 0; i < row.size(); i++)
         {
@@ -58,6 +60,24 @@ public class Write_CSV {
           }
         }
         writer.write("\n");
+      }
+      writer.close();
+    }
+    catch(IOException exe){
+      System.out.println("Cannot create file");
+    }
+  }
+
+  public static <T> void arrayToCSV(String fileLocation, ArrayList<T> arr)
+  {
+    try
+    {
+      File f = new File(fileLocation);
+      FileWriter fw = new FileWriter(fileLocation);
+      BufferedWriter writer = new BufferedWriter(fw);
+      for (T row: arr)
+      {
+        writer.write(row.toString() + "\n");
       }
       writer.close();
     }
