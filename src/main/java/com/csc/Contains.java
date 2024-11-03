@@ -42,4 +42,23 @@ public class Contains {
 
     return organicXMoist;
   }
+
+  public static double colAvg(ArrayList<ArrayList<String>> df, int column)
+  {
+    int i = 1;
+    double total = 0;
+    int amount = 0;
+    while(i < df.size())
+    {
+      String element = df.get(i).get(3);
+      if(!element.equals(""))
+      {
+        total = total + Double.valueOf(element);
+        amount++;
+      }
+      i++;
+    }
+
+    return total / ((double)amount);
+  }
 }

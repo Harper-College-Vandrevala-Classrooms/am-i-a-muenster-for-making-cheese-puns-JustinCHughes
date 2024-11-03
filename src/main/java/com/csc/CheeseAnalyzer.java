@@ -40,5 +40,8 @@ public class CheeseAnalyzer
 
     input = "Milk from a " + maxMilk + " is the most used for cheeses in Canada with a total of: " + currMax + "\n";
     Write_CSV.statement("output.txt", input);
+
+    input = "The average percent moisture of the cheeses listed is " + Contains.colAvg(df, 3) + "%\n";
+    Write_CSV.statement("output.txt", input);
   }
 }
